@@ -71,8 +71,8 @@ searchInput.addEventListener("input", function (e) {
   let resultData = allData.filter(function (country) {
     let chosen = country.name.common.toLowerCase();
     let searchCountryName = e.target.value.toLowerCase();
-    searchCountryName.trim();
-    return chosen.includes(searchCountryName);
+    ;
+    return chosen.includes(searchCountryName.trim());
   });
   countriesList.innerHTML = "";
   console.log(resultData);
