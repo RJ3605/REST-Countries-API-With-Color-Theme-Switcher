@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Rest Countries API With Color Theme Switcher</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <!-- Title -->
+            <h1>Where in the world?</h1>
+            <!-- Theme Toggler -->
+            <div class="theme-switch-wrapper">
+                <span id="toggle-icon">
+                    <span class="toggle-text">Light Mode</span>
+                    <i class="fas fa-sun"></i>
+                    <label class="theme-switch">
+                        <input type="checkbox">
+                        <div class="slider round"></div>
+                    </label>
+                </span>
+            </div>
+        </header>
+
+        <div class="page">
+            <!-- Search Section -->
+            <section class="navigation">
+                <div class="topnav">
+                    <!-- Search Bar -->
+                    <input id="search" type="text" placeholder="Search for a country">
+                    <!-- Region Filter -->
+                    <select class="region">
+                        <option value="" selected>Filter by Region</option>
+                        <option value="africa">Africa</option>
+                        <option value="americas">Americas</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
+            </section>
+            <!-- List Of All Countries -->
+            <section class="countries-list">
+            </section>
+        </div>
+
+
+
+    </main>
+
+    <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
