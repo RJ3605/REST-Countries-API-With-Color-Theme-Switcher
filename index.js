@@ -70,8 +70,8 @@ region.addEventListener("change", function () {
 searchInput.addEventListener("input", function (e) {
   let resultData = allData.filter(function (country) {
     let chosen = country.name.common.toLowerCase();
-    let searchCountryName = e.target.value.trim();
-    searchCountryName.toLowerCase();
+    let searchCountryName = e.target.value.toLowerCase();
+    searchCountryName.trim();
     return chosen.includes(searchCountryName);
   });
   countriesList.innerHTML = "";
