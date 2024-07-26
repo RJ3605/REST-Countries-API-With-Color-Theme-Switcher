@@ -36,6 +36,8 @@ body::-webkit-scrollbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 header {
@@ -58,8 +60,7 @@ header {
 .topnav {
   display: flex;
   justify-content: space-between;
-  width: 89%;
-  max-width: 95rem;
+  width: 100%;
 }
 
 .topnav input[type="text"] {
@@ -73,7 +74,7 @@ header {
 }
 
 ::placeholder {
-  color: var(--text)
+  color: var(--text);
 }
 
 @media screen and (max-width: 600px) {
@@ -91,7 +92,7 @@ header {
   width: 10rem;
   height: 3rem;
   padding-left: 0.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   line-height: inherit;
   color: var(--text);
@@ -100,25 +101,27 @@ header {
 
 .countries-list {
   display: grid;
-  justify-content: center;
-  width: 100%;
-  max-width: 105rem;
-  gap: 5rem;
-  grid-template-columns: repeat(auto-fill, 20rem);
+  justify-content: space-between;
+  width: 100vw;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  row-gap: 5rem;
 }
 
 .country {
   display: flex;
   flex-flow: row wrap;
   background-color: var(--elements);
-  padding-bottom: 3rem;
   margin: none;
   cursor: pointer;
   border-radius: 0.25rem;
 }
 
-img {
+.country img {
   border-radius: 0.25rem 0.25rem 0rem 0rem;
+  object-fit: fill;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
 }
 
 h2 {
@@ -215,4 +218,107 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+.summary {
+  width: 100vw;
+}
+
+button {
+  font-family: "Nunito sans", sans-serif;
+  cursor: pointer;
+  background-color: var(--elements);
+  color: var(--text);
+  border-radius: 0.25em;
+  box-shadow: 0px 0px 5px 0px var(--shadow);
+}
+
+#back-button {
+  display: hidden;
+  height: 2.5rem;
+  width: 9rem;
+  margin-bottom: 3rem;
+}
+
+.border-countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20rem);
+  column-gap: 1rem;
+}
+
+.border-country {
+  height: 2.5rem;
+  width: 8rem;
+}
+
+.country-details-page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 6rem;
+  background-color: var(--background);
+}
+
+.country-details-page {
+  display: flex;
+  flex-direction: row;
+}
+
+#image-div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  max-width: 40%;
+  object-fit: cover;
+}
+
+.details-flag {
+  width: 100vw;
+  max-width: 100%;
+  height: 25rem;
+}
+
+.country-details-page-subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.country-details-page-sub-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-details-page-list {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.border-countries-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.border-countries-container p {
+  width: 9rem;
+  height: 5rem;
+}
+
+.border-countries {
+  display: grid;
+  justify-content: space-between;
+  max-width: 45rem;
+  min-width: 20rem;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  row-gap: 0.75rem;
+}
+
+.country-details-page h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#none {
+  cursor: default;
+  border: none;
 }
